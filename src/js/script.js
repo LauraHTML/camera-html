@@ -5,7 +5,7 @@ const canvas = document.getElementById("canvas");
 
 async function configurarCamera(){
     try{
-        const midia = await navigator.mediaDevices({
+        const midia = await navigator.mediaDevices.getUserMedia({
             // habilitar camera traseira, não habilitar audio
             video: {facingMode: "enviroment"},
             audio: false
