@@ -24,17 +24,17 @@ configurarCamera()
 
 botaoScanear.onClick = async ()=> {
     botaoScanear.disabled=true;
-    resultado.innerText="Fazendo a leitura do texto, aguarde"
+    resultado.innerText="Fazendo a leitura do texto, aguarde";
 
     //define o canvas para iniciar leitura
-    const contexto = canvas.getContext('2d')
+    const contexto = canvas.getContext("2");
 
     //ajusta o tamanho do canvas para o tamanho real do vídeo
     canvas.width = videoElemento.videoWidth;
     canvas.height = videoElemento.videoHeight;
 
     //aplicando filtro para melhorar OCR
-    contexto.filter='contrast(1.2) grayscale(1)'
+    contexto.filter='contrast(1.2) grayscale(1)';
 
     //desenha o vídeo no canvas
     contexto.drawImage(videoElemento,0,0, canvas.width, canvas.height);
@@ -42,6 +42,7 @@ botaoScanear.onClick = async ()=> {
     try{
         //pegando o texto pelo tesseract
         const {data: {text}} = await Tesseract.recognize(
+            canvas,
             'por' //idioma
         );
 
