@@ -1,0 +1,28 @@
+:root {
+  --color-amarela: #febf6f;
+  --color-azul: #89b4ca;
+  --color-vermelha: #c2370a;
+  --color-caramelo: #c46500;
+  --color-marrom: #522c25;
+  --background-color: #fff1e6;
+
+  /* Arredondamento */
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera app</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!-- api externa -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h3>Projeto com câmera do celular</h3>
+    </header>
+    <main>
+
+        <div class="container">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            <button id="botao">Ler texto</button>
+            <div id="saida">Lendo texto...</div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 - Todos os direito reservados</p>
+    </footer>
+    
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
